@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Be My Valentine?&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&amp;family=Comic+Neue:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Fredoka', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1a1c2c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom Animations */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes float {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: translateY(0px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-20px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: translateY(0px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes glow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { box-shadow: 0 0 5px #fff, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { box-shadow: 0 0 20px #fff, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { box-shadow: 0 0 5px #fff, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animate-float { animation: float 6s ease-in-out infinite; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animate-float-delayed { animation: float 7s ease-in-out infinite 1s; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animate-glow { animation: glow 3s infinite; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.fade-in-up {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.8s ease-out forwards;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Smiski Glow Effect */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.smiski-glow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>filter: blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom Scrollbar */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar { width: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-track { background: #1a1c2c; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-thumb { background: #ff6b6b; border-radius: 4px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Confetti Canvas */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#confetti-canvas {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 50;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hidden-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="text-white min-h-screen flex flex-col items-center justify-center relative selection:bg-pink-500 selection:text-white"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Background Elements (Stars/Hearts) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fixed inset-0 z-0 opacity-30 pointer-events-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute top-10 left-10 text-2xl animate-float"&gt;<span class="s1">💫</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute top-1/4 right-20 text-xl animate-float-delayed"&gt;<span class="s1">✨</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute bottom-20 left-1/4 text-3xl animate-float"&gt;<span class="s1">🌟</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute top-1/2 right-10 text-lg animate-float-delayed"&gt;<span class="s1">💖</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Container --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="relative z-10 w-full max-w-md px-4"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION 1: THE QUESTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="question-section" class="flex flex-col items-center text-center space-y-8 transition-all duration-500"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Header Image/Illustration --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative w-64 h-64 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- CSS Art Representation of Smiski &amp; Snoopy --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="absolute inset-0 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Smiski (Glowing figure) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative mr-8 animate-float"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-20 h-24 bg-white rounded-t-full rounded-b-3xl relative shadow-[0_0_30px_rgba(255,255,255,0.6)]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Smiski Eyes --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute top-8 left-4 w-2 h-2 bg-black rounded-full opacity-80"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute top-8 right-4 w-2 h-2 bg-black rounded-full opacity-80"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Snoopy (Beagle) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative ml-8 animate-float-delayed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-20 h-20 bg-white rounded-full relative border-4 border-black"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Ear --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute -top-2 -left-2 w-8 h-12 bg-black rounded-full transform -rotate-12"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Nose --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute top-8 -right-2 w-6 h-6 bg-black rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Eye --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute top-6 left-6 w-2 h-2 bg-black rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Red Collar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute -bottom-2 left-4 w-12 h-4 bg-red-500 rounded-full z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Body --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute -bottom-8 left-2 w-16 h-12 bg-white rounded-b-3xl border-4 border-t-0 border-black"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Hearts floating between them --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="absolute top-0 left-1/2 transform -translate-x-1/2 text-4xl animate-bounce"&gt;<span class="s1">💕</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-red-400 drop-shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Will you be my Valentine?</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-300 text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>A day planned with Smiski secrets and Snoopy smiles.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Buttons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex gap-6 mt-8 items-center justify-center w-full h-32"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="yes-btn" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full text-xl font-bold shadow-lg hover:scale-110 transition-transform duration-200 animate-glow border-2 border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>YES! <span class="s1">💖</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="no-btn" class="px-6 py-3 bg-gray-700 rounded-full text-lg font-semibold text-gray-300 hover:bg-gray-600 transition-colors absolute"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>No... <span class="s1">😢</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION 2: THE ITINERARY (Hidden Initially) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="itinerary-section" class="hidden-section opacity-0 w-full max-w-lg mx-auto pb-20"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-10 fade-in-up"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl font-bold text-pink-300 mb-2"&gt;Yay! It's a Date! <span class="s1">🎉</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-400"&gt;Here is our secret mission for tomorrow:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative border-l-4 border-pink-500/30 ml-6 space-y-12"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Item 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative pl-8 fade-in-up" style="animation-delay: 0.1s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[14px] top-0 w-6 h-6 bg-pink-500 rounded-full border-4 border-[#1a1c2c] flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-2 h-2 bg-white rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-pink-500/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-pink-400 font-bold text-sm tracking-wider uppercase"&gt;2:30 PM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-white mt-1"&gt;The Rendezvous <span class="s1">🎯</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 mt-2 text-sm"&gt;Meetup time! The adventure begins. Don't be late, or Snoopy will be sad!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Item 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative pl-8 fade-in-up" style="animation-delay: 0.2s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[14px] top-0 w-6 h-6 bg-purple-500 rounded-full border-4 border-[#1a1c2c] flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-2 h-2 bg-white rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-purple-400 font-bold text-sm tracking-wider uppercase"&gt;2:30 PM - 5:30 PM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-white mt-1"&gt;Arcade &amp; Smiski Hunt <span class="s1">🕹️📸</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 mt-2 text-sm"&gt;Photobooth memories, arcade fun, and hunting for hidden Smiskis in the city!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Item 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative pl-8 fade-in-up" style="animation-delay: 0.3s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[14px] top-0 w-6 h-6 bg-orange-500 rounded-full border-4 border-[#1a1c2c] flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-2 h-2 bg-white rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-orange-400 font-bold text-sm tracking-wider uppercase"&gt;6:00 PM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-white mt-1"&gt;Dinner Date <span class="s1">🍽️</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-400 mt-2 text-sm"&gt;Refueling our energy with delicious food. Maybe something fancy, maybe pizza like Snoopy likes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Item 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative pl-8 fade-in-up" style="animation-delay: 0.4s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute -left-[14px] top-0 w-6 h-6 bg-blue-400 rounded-full border-4 border-[#1a1c2c] flex items-center justify-center animate-pulse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-2 h-2 bg-white rounded-full"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-gradient-to-br from-blue-900/40 to-purple-900/40 backdrop-blur-sm p-5 rounded-2xl border border-blue-400/30 hover:border-blue-400/60 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.2)]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-blue-300 font-bold text-sm tracking-wider uppercase"&gt;7:30 PM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-white mt-1"&gt;Sidney Myer MSO <span class="s1">🎻✨</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-300 mt-2 text-sm font-medium"&gt;The grand finale! A magical evening with the Melbourne Symphony Orchestra.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-12 text-center fade-in-up" style="animation-delay: 0.6s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-pink-200 italic"&gt;"Happiness is a warm puppy... and you."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-4 text-4xl animate-bounce inline-block"&gt;<span class="s1">❤️</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;canvas id="confetti-canvas"&gt;&lt;/canvas&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Logic for the "No" button (Move away on hover) ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const noBtn = document.getElementById('no-btn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const container = document.querySelector('main');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>noBtn.addEventListener('mouseover', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Calculate random position within the container</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// We want it to stay somewhat near the buttons but move erratically</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const x = Math.random() * 200 - 100; // -100 to 100px</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const y = Math.random() * 100 - 50;<span class="Apple-converted-space">  </span>// -50 to 50px</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>noBtn.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random() * 20 - 10}deg)`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>noBtn.style.transition = 'all 0.3s ease';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Logic for the "Yes" button ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const yesBtn = document.getElementById('yes-btn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const questionSection = document.getElementById('question-section');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const itinerarySection = document.getElementById('itinerary-section');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>yesBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 1. Fade out question</p>
+<p class="p1"><span class="Apple-converted-space">            </span>questionSection.style.opacity = '0';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>questionSection.style.transform = 'scale(0.9)';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>questionSection.style.display = 'none';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 2. Show Itinerary</p>
+<p class="p1"><span class="Apple-converted-space">                </span>itinerarySection.classList.remove('hidden-section');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Trigger reflow</p>
+<p class="p1"><span class="Apple-converted-space">                </span>void itinerarySection.offsetWidth;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>itinerarySection.style.opacity = '1';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 3. Start Confetti</p>
+<p class="p1"><span class="Apple-converted-space">                </span>startConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 500);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Confetti Logic ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const canvas = document.getElementById('confetti-canvas');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ctx = canvas.getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let confetti = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const confettiCount = 150;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#ffffff'];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resizeCanvas() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>canvas.width = window.innerWidth;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>canvas.height = window.innerHeight;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('resize', resizeCanvas);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resizeCanvas();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function createConfetti() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; confettiCount; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>confetti.push({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>x: Math.random() * canvas.width,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>y: Math.random() * canvas.height - canvas.height,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>color: colors[Math.floor(Math.random() * colors.length)],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>size: Math.random() * 5 + 2,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>speedY: Math.random() * 3 + 2,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>speedX: Math.random() * 2 - 1,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>rotation: Math.random() * 360,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>rotationSpeed: Math.random() * 10 - 5</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateConfetti() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>ctx.clearRect(0, 0, canvas.width, canvas.height);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>confetti.forEach((piece, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>piece.y += piece.speedY;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>piece.x += piece.speedX;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>piece.rotation += piece.rotationSpeed;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.save();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.translate(piece.x, piece.y);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.rotate(piece.rotation * Math.PI / 180);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.fillStyle = piece.color;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.fillRect(-piece.size / 2, -piece.size / 2, piece.size, piece.size);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>ctx.restore();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (piece.y &gt; canvas.height) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>confetti[index].y = -10;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>confetti[index].x = Math.random() * canvas.width;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>requestAnimationFrame(updateConfetti);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function startConfetti() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>createConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
